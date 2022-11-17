@@ -1,0 +1,45 @@
+{
+	"eula": "",
+	"vendor": "Raghu",
+	"license": "",
+	"id": "Raghu",
+	"version": "0.1.0",
+	"name": "Hello World Widget",
+	"newInstancePrefix": "Hello World Widget",
+	"description": "A Hello World Custom Widget ",
+	"icon": "",
+	"webcomponents": [
+		{
+			"kind": "main",
+			"tag": "com-sap-helloWorld",
+			"url": "",
+			"integrity": "",
+			"ignoreIntegrity": true
+		}
+	],
+	"properties": {
+		"name": {
+			"type": "string",
+            "description": "input user name",
+			"default": "Raghu"
+		}
+	},
+	"methods": {
+		"sayHello": {
+			"description": "Metho to say Hello",
+			"parameters": [],
+			"body": "return this.name"
+		},
+		"setName": {
+			"description": "Sets Name attribute in the Hello World Widget",
+			"parameters": [
+				{
+					"name": "name",
+					"type": "String"
+				}
+			],
+			"body": "this.name = name;"
+		}
+	},
+	"events": {}
+}
