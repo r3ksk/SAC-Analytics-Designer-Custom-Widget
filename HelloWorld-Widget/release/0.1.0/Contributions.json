@@ -5,9 +5,9 @@
 	"id": "HW_Widget_ID",
 	"version": "0.1.0",
 	"name": "Hello World Widget",
-	"newInstancePrefix": "Hello World Widget",
+	"newInstancePrefix": "WidgetTemplate",
 	"description": "A Hello World Custom Widget ",
-	"icon": "",
+	"icon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAAA3NCSVQICAjb4U/gAAAAb1BMVEX///+ZmZl4dXdBPj9hYGGOjpE6ODo8OjwvLC0lISIpJSaMiooyLzH/cjMxLi9GREb/ZSk2MzV9fX1MSks4NjcrJyn/WR9ycnJRT1AtKiv/TRVdXF1ra2v7VCfJyMk+PD6tra+rqqtUUlU0MTNqaGpjxDg2AAAAAXRSTlMAQObYZgAAAAlwSFlzAAAOxAAADsQBlSsOGwAAAKhJREFUGNM9z9EagiAMBeDpEGkWNAGhqFTq/Z8xwK/+q7PtZgeg6npEMcBPJ0d1Kmg6ZnFGRZcLESnR7tpoouuVSCPPZYHWee+XxTsrvQeYQrwV97tL5uZigMeoqucTUSnWEVBX4fWaW2BYz1W3bXsLDPldcD8MoYZ3glmMjNbGLJk5igDgnLTGHazdAPo1Gdms2bZXhRmbMuNR5rNWJuX075sMYg57jV94IQ2Xqt1atQAAAABJRU5ErkJggg==",
 	"webcomponents": [
 		{
 			"kind": "main",
@@ -18,39 +18,8 @@
 		}
 	],
 	"properties": {
-		"name": {
-			"type": "string",
-            "description": "input user name",
-			"default": "Raghuraman"
-		},
-		"message": {
-			"type": "string",
-            "description": "HW Message",
-			"default": "Hello World Raghuraman"
-		}
 	},
 	"methods": {
-		"sayHello": {
-			"description": "Method to say Hello",
-			"parameters": [],
-			"body": "this.message = 'Hello World ' + this.name;"
-		},
-		"setName": {
-			"description": "Sets Name attribute in the Hello World Widget",
-			"parameters": [
-				{
-					"name": "n",
-					"type": "string"
-				}
-			],
-			"body": "this.name = n;"
-		},
-		"getName": {
-			"returnType": "string",
-			"description": "Gets the Name attribute in the Hello World Widget",
-			"parameters": [],
-			"body": "return this.message;"
-		}
 	},
 	"events": {}
 }
