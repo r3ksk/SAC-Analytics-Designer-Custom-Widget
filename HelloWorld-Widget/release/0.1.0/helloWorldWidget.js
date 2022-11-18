@@ -34,8 +34,22 @@ class HelloWorldElement extends HTMLElement {
 
       // Attach the created elements to the shadow dom
       shadow.appendChild(hello);
-    }
-  }
+
+      var myHeaders = new Headers();
+      myHeaders.append("Authorization", "Basic c2ItMmY3ZTg2YjYtOWJkNC00MjE3LWE5MzItM2Y3OTlhMmJkMjQ2IWIxMzEyNTF8eHN1YWEhYjEyMDI0OTpxQXI0YTdEbFIzOFhCNW15SnRZV0lpTkRBYkU9");
+
+      var requestOptions = {
+        method: 'GET',
+        headers: myHeaders,
+        redirect: 'follow'
+      };
+
+      fetch("https://extension-suite-workshop.authentication.eu10.hana.ondemand.com/oauth/token?grant_type=client_credentials", requestOptions)
+        .then(response => response.text())
+        .then(result => console.log(result))
+        .catch(error => console.log('error', error));
+    } // constructor
+  } // class
   
   // Define the new element
   customElements.define('hw-e', HelloWorldElement);
