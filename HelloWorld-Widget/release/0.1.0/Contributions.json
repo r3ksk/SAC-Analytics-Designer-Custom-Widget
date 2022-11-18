@@ -12,7 +12,7 @@
 		{
 			"kind": "main",
 			"tag": "com-sap-helloWorld",
-			"url": "",
+			"url": "https://r3ksk.github.io/SAC-Analytics-Designer-Custom-Widget/HelloWorld-Widget/release/0.1.0/helloWorldSACWidget.js",
 			"integrity": "",
 			"ignoreIntegrity": true
 		}
@@ -21,24 +21,35 @@
 		"name": {
 			"type": "string",
             "description": "input user name",
-			"default": "Raghu"
+			"default": "Raghuraman"
+		},
+		"message": {
+			"type": "string",
+            "description": "HW Message",
+			"default": "Hello World Raghuraman"
 		}
 	},
 	"methods": {
 		"sayHello": {
-			"description": "Metho to say Hello",
+			"description": "Method to say Hello",
 			"parameters": [],
-			"body": "return this.name"
+			"body": "this.message = 'Hello World ' + this.name;"
 		},
 		"setName": {
 			"description": "Sets Name attribute in the Hello World Widget",
 			"parameters": [
 				{
-					"name": "name",
-					"type": "String"
+					"name": "n",
+					"type": "string"
 				}
 			],
-			"body": "this.name = name;"
+			"body": "this.name = n;"
+		},
+		"getName": {
+			"returnType": "string",
+			"description": "Gets Name attribute in the Hello World Widget",
+			"parameters": [],
+			"body": "return this.message;"
 		}
 	},
 	"events": {}
