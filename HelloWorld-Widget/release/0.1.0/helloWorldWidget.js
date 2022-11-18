@@ -18,7 +18,7 @@ class HelloWorldElement extends HTMLElement {
       }
 
       if(this.hasAttribute('name')) {
-        this.setName(this.getAttribute('img'));
+        this.setName(this.getAttribute('name'));
       } else {
         this.setName("No Name Given")
       }
