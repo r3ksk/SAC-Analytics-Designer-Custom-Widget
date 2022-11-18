@@ -1,5 +1,5 @@
 // Create a class for the element
-class PopUpInfo extends HTMLElement {
+class HelloWorldElement extends HTMLElement {
     constructor() {
       // Always call super first in constructor
       super();
@@ -78,5 +78,5 @@ class PopUpInfo extends HTMLElement {
   }
   
   // Define the new element
-  customElements.define('popup-info', PopUpInfo);
+  customElements.define('hwe', HelloWorldElement);
   
