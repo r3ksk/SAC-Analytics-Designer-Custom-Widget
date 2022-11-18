@@ -11,14 +11,14 @@
 	"webcomponents": [
         {
 			"kind": "main",
-			"tag": "com-sap-sample-helloworld3",
+			"tag": "com-sap-sample-helloworld4",
             "url": "https://r3ksk.github.io/SAC-Analytics-Designer-Custom-Widget/HelloWorld-Widget/release/0.1.0/helloWorldSACWidget.js",
             "integrity": "",
             "ignoreIntegrity" : true
         },
 		{
 			"kind": "styling",
-			"tag": "com-sap-sample-helloworld3-aps",
+			"tag": "com-sap-sample-helloworld4-aps",
             "url": "https://r3ksk.github.io/SAC-Analytics-Designer-Custom-Widget/HelloWorld-Widget/release/0.1.0/aps_webcomponent.js",
 			"integrity": "",
             "ignoreIntegrity" : true
@@ -70,3 +70,5 @@
 	"events": {
 	}
 }
+
+
