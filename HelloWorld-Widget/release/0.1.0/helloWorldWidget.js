@@ -33,7 +33,6 @@ class HelloWorldElement extends HTMLElement {
       hello.textContent = this.name;
 
       // Attach the created elements to the shadow dom
-      shadow.appendChild(style);
       shadow.appendChild(hello);
     }
   }
