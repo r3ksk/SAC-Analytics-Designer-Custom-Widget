@@ -2,7 +2,7 @@
 	"eula": "",
 	"vendor": "Raghu",
 	"license": "",
-	"id": "Raghu",
+	"id": "HW_Widget_ID",
 	"version": "0.1.0",
 	"name": "Hello World Widget",
 	"newInstancePrefix": "Hello World Widget",

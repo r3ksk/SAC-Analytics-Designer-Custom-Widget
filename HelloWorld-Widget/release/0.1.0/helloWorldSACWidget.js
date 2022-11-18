@@ -27,6 +27,6 @@ class HelloWorldElement extends HTMLElement {
 }
 
   // Define the new element
-  customElements.define('hw-e', HelloWorldElement);
+  customElements.define('com-sap-helloWorld', HelloWorldElement);
 
 })();  
