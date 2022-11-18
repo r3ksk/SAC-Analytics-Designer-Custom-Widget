@@ -31,7 +31,7 @@ class HelloWorldElement extends HTMLElement {
       hello.setAttribute('class', 'info');
 
       // Take attribute content and put it inside the info span
-      hello.textContent = getName();
+      hello.textContent = this.name;
   
       style.textContent = `
         .wrapper {
