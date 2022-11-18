@@ -10,7 +10,7 @@
   
 
 
-  customElements.define("com-sap-HelloWorld", class HelloWorldElement extends HTMLElement {
+  customElements.define("com-sap-sample-helloworld1", class HelloWorldElement extends HTMLElement {
     
   constructor() {
       // Always call super first in constructor

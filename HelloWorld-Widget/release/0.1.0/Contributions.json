@@ -11,7 +11,7 @@
 	"webcomponents": [
 		{
 			"kind": "main",
-			"tag": "com-sap-HelloWorld",
+			"tag": "com-sap-sample-helloworld1",
 			"url": "https://r3ksk.github.io/SAC-Analytics-Designer-Custom-Widget/HelloWorld-Widget/release/0.1.0/helloWorldSACWidget.js",
 			"integrity": "",
 			"ignoreIntegrity": true
