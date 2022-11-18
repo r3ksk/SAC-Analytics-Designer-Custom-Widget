@@ -20,7 +20,7 @@ class HelloWorldElement extends HTMLElement {
       if(this.hasAttribute('name')) {
         this.name = this.getAttribute('name');
       } else {
-        this.name =  = "No Name Given";
+        this.name =  "No Name Given";
       }
 
     //   sayHello (name){
