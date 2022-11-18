@@ -38,4 +38,4 @@ class HelloWorldElement extends HTMLElement {
   }
   
   // Define the new element
-  customElements.define('hwe', HelloWorldElement);
+  customElements.define('hw-e', HelloWorldElement);
