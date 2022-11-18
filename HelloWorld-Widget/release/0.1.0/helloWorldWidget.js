@@ -9,24 +9,23 @@ class HelloWorldElement extends HTMLElement {
 
       let name;
 
-      setName (name){
-        this.name = name;
-      }
+    //   setName (name){
+    //     this.name = name;
+    //   }
 
-      getName (name) {
-        return this.name;
-      }
+    //   getName (name) {
+    //     return this.name;
+    //   }
 
       if(this.hasAttribute('name')) {
-        this.setName(this.getAttribute('name'));
+        this.name = this.getAttribute('name');
       } else {
-        this.setName("No Name Given")
+        this.name =  = "No Name Given";
       }
 
-      sayHello (name){
-        this.setName(name);
-     //   this.sayHello();
-      }
+    //   sayHello (name){
+    //     this.setName(name);
+    //   }
 
       const hello = document.createElement('span');
       hello.setAttribute('class', 'info');
