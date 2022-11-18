@@ -28,11 +28,11 @@ class HelloWorldElement extends HTMLElement {
      //   this.sayHello();
       }
 
-      const sayHello = document.createElement('span');
-      sayHello.setAttribute('class', 'info');
+      const hello = document.createElement('span');
+      hello.setAttribute('class', 'info');
 
       // Take attribute content and put it inside the info span
-      sayHello.textContent = getName();
+      hello.textContent = getName();
   
       style.textContent = `
         .wrapper {
@@ -66,8 +66,7 @@ class HelloWorldElement extends HTMLElement {
   
       // Attach the created elements to the shadow dom
       shadow.appendChild(style);
-      console.log(style.isConnected);
-      shadow.appendChild(sayHello);
+      shadow.appendChild(hello);
     }
   }
   
