@@ -3,19 +3,19 @@
   let tmpl = document.createElement('template');
   let name;
 
-  this.tmpl.innerHTML = '<span id="hwName">No Data</span>';
+  this.tmpl.innerHTML = `<span id="hwName">No Data</span>`;
 
 
 class HelloWorldElement extends HTMLElement {
     
-    constructor() {
+  constructor() {
       // Always call super first in constructor
       super();
 
       // Create a shadow root
       this._shadowRoot = this.attachShadow({ mode: "open" });
       this._shadowRoot.appendChild(tmpl.content.cloneNode(true));
-    }
+  }
 
   set Name (a){
     this._shadowRoot.getElmentById("hwName").value = a;
@@ -25,8 +25,7 @@ class HelloWorldElement extends HTMLElement {
     return this._shadowRoot.getElmentById("hwName").value;
   }
 }
-
   // Define the new element
-  customElements.define('com-sap-helloWorld', HelloWorldElement);
+  customElements.define('com-sap-HelloWorld', HelloWorldElement);
 
 })();  
