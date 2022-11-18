@@ -47,7 +47,7 @@
 		},
 		"getName": {
 			"returnType": "string",
-			"description": "Gets Name attribute in the Hello World Widget",
+			"description": "Gets the Name attribute in the Hello World Widget",
 			"parameters": [],
 			"body": "return this.message;"
 		}

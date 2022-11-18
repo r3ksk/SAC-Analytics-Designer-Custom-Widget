@@ -1,9 +1,9 @@
 (function () {
 
   let tmpl = document.createElement('template');
-  let name;
+  let Name;
 
-  this.tmpl.innerHTML = `<span id="hwName">No Data</span>`;
+  tmpl.innerHTML = `<span id="hwName">No Data</span>`;
   
 
 
@@ -27,6 +27,6 @@ class HelloWorldElement extends HTMLElement {
   }
 }
   // Define the new element
-  customElements.define('com-sap-HelloWorld', HelloWorldElement);
+  customElements.define("com-sap-HelloWorld", HelloWorldElement);
 
 })();  
