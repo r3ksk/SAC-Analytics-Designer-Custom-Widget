@@ -1,24 +1,24 @@
 {
-	"name": "Hello World Step 4",
+	"name": "Hello World Step 4_1",
 	"description": "Part of the hello world custom widget tutorial for SAC.  Now with a script API",
 	"eula": "",
 	"vendor": "",
 	"license": "",
-	"id": "com.sap.sample.helloworld4",
-	"newInstancePrefix": "HelloWorld4",
+	"id": "com.sap.sample.helloworld4_1",
+	"newInstancePrefix": "HelloWorld4_1",
 	"version": "0.0.1",
 	"icon": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAAA3NCSVQICAjb4U/gAAAAb1BMVEX///+ZmZl4dXdBPj9hYGGOjpE6ODo8OjwvLC0lISIpJSaMiooyLzH/cjMxLi9GREb/ZSk2MzV9fX1MSks4NjcrJyn/WR9ycnJRT1AtKiv/TRVdXF1ra2v7VCfJyMk+PD6tra+rqqtUUlU0MTNqaGpjxDg2AAAAAXRSTlMAQObYZgAAAAlwSFlzAAAOxAAADsQBlSsOGwAAAKhJREFUGNM9z9EagiAMBeDpEGkWNAGhqFTq/Z8xwK/+q7PtZgeg6npEMcBPJ0d1Kmg6ZnFGRZcLESnR7tpoouuVSCPPZYHWee+XxTsrvQeYQrwV97tL5uZigMeoqucTUSnWEVBX4fWaW2BYz1W3bXsLDPldcD8MoYZ3glmMjNbGLJk5igDgnLTGHazdAPo1Gdms2bZXhRmbMuNR5rNWJuX075sMYg57jV94IQ2Xqt1atQAAAABJRU5ErkJggg==",
 	"webcomponents": [
         {
 			"kind": "main",
-			"tag": "com-sap-sample-helloworld4",
+			"tag": "com-sap-sample-helloworld4_1",
             "url": "https://r3ksk.github.io/SAC-Analytics-Designer-Custom-Widget/HelloWorld-Widget/release/0.1.0/helloWorldSACWidget.js",
             "integrity": "",
             "ignoreIntegrity" : true
         },
 		{
 			"kind": "styling",
-			"tag": "com-sap-sample-helloworld4-aps",
+			"tag": "com-sap-sample-helloworld4_1-aps",
             "url": "https://r3ksk.github.io/SAC-Analytics-Designer-Custom-Widget/HelloWorld-Widget/release/0.1.0/aps_webcomponent.js",
 			"integrity": "",
             "ignoreIntegrity" : true
@@ -34,6 +34,10 @@
 			"type": "string",
 			"description": "The text to be displayed in the widget",
 			"default" : "Hello World"
+		},"selectedRowData": {
+			"type": "string",
+			"description": "Selected Row Data",
+			"default" : ""
 		}
 	},
 	"methods": {
@@ -64,6 +68,17 @@
 				}
 			],
 			"body": "this.widgetText = newTextValue;"
+		},
+		"setSelectedRowData": {
+			"description": "Set the selected table row for sending payload",
+			"parameters": [
+				{
+					"name": "rowData",
+					"type": "string",
+					"description": "selected table row data"
+				}
+			],
+			"body": "this.selectedRowData = rowData;"
 		}
 			
 	},
