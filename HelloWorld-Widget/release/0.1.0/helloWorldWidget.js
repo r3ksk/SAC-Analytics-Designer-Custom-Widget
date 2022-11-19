@@ -35,14 +35,13 @@ class HelloWorldElement extends HTMLElement {
       // Attach the created elements to the shadow dom
       shadow.appendChild(hello);
 
-      const access_token = document.createElement('span');
-      shadow.appendChild(access_token);
+
      
 
       var myHeaders = new Headers();
       myHeaders.append("Authorization", "Basic c2ItMmY3ZTg2YjYtOWJkNC00MjE3LWE5MzItM2Y3OTlhMmJkMjQ2IWIxMzEyNTF8eHN1YWEhYjEyMDI0OTpxQXI0YTdEbFIzOFhCNW15SnRZV0lpTkRBYkU9");
       var obj;
-
+      
       var requestOptions = {
         method: 'GET',
         headers: myHeaders,
@@ -55,7 +54,11 @@ class HelloWorldElement extends HTMLElement {
           result => {
             console.log(result);
             this.obj = JSON.parse(result);
-            this.access_token.textContent = "Recieved Access token is " + this.obj.access_token;
+            const container = document.createElement('div');
+            const access_token = document.createElement('span');
+            access_token.textContent = "Recieved Access token is " + this.obj.access_token;
+            container.appendChild(access_token);
+            this.shadow.appendChild(container);
           } 
         )
         .catch(error => console.log('error', error));
