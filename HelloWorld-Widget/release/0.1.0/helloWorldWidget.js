@@ -55,7 +55,7 @@ class HelloWorldElement extends HTMLElement {
           result => {
             console.log(result);
             this.obj = JSON.parse(result);
-            this.access_token.textContent = "Recieved Access token is " + obj.access_token;
+            this.access_token.textContent = "Recieved Access token is " + this.obj.access_token;
           } 
         )
         .catch(error => console.log('error', error));
