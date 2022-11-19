@@ -35,8 +35,13 @@ class HelloWorldElement extends HTMLElement {
       // Attach the created elements to the shadow dom
       shadow.appendChild(hello);
 
+      const access_token = document.createElement('span');
+      shadow.appendChild(access_token);
+     
+
       var myHeaders = new Headers();
       myHeaders.append("Authorization", "Basic c2ItMmY3ZTg2YjYtOWJkNC00MjE3LWE5MzItM2Y3OTlhMmJkMjQ2IWIxMzEyNTF8eHN1YWEhYjEyMDI0OTpxQXI0YTdEbFIzOFhCNW15SnRZV0lpTkRBYkU9");
+      var obj;
 
       var requestOptions = {
         method: 'GET',
@@ -46,7 +51,13 @@ class HelloWorldElement extends HTMLElement {
 
       fetch("https://extension-suite-workshop.authentication.eu10.hana.ondemand.com/oauth/token?grant_type=client_credentials", requestOptions)
         .then(response => response.text())
-        .then(result => console.log(result))
+        .then(
+          result => {
+            console.log(result);
+            this.obj = JSON.parse(result);
+            this.access_token.textContent = "Recieved Access token is " + obj.access_token;
+          } 
+        )
         .catch(error => console.log('error', error));
     } // constructor
   } // class
