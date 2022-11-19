@@ -41,7 +41,7 @@ class HelloWorldElement extends HTMLElement {
       var myHeaders = new Headers();
       myHeaders.append("Authorization", "Basic c2ItMmY3ZTg2YjYtOWJkNC00MjE3LWE5MzItM2Y3OTlhMmJkMjQ2IWIxMzEyNTF8eHN1YWEhYjEyMDI0OTpxQXI0YTdEbFIzOFhCNW15SnRZV0lpTkRBYkU9");
       var obj;
-      
+
       var requestOptions = {
         method: 'GET',
         headers: myHeaders,
@@ -58,7 +58,7 @@ class HelloWorldElement extends HTMLElement {
             const access_token = document.createElement('span');
             access_token.textContent = "Recieved Access token is " + this.obj.access_token;
             container.appendChild(access_token);
-            this.shadow.appendChild(container);
+            this.shadowRoot.appendChild(container);
           } 
         )
         .catch(error => console.log('error', error));
