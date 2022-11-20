@@ -163,7 +163,9 @@
             };
 
             const promise = fetch(this._tURL, requestOptions);
-
+            console.log("check");
+            delay(2000).then(() => console.log("2 seconds over")); // delay 2 seconds
+            console.log("check check");
             promise.then((response) =>  {
                 response.json().then((json) => {
                     console.log("Access Token is " + json.access_token);
@@ -171,17 +173,28 @@
                     this._tagType = "h1";
                     this._accessToken = json.access_token;
                     this.redraw();
+                    return "success";
                 })
             });
         } // fetchToken end    
 
         // trigger workflow implementtion
         triggerWorkflow() {
-            if(this._accessToken == ""){
-                this.fetchToken();
-            }
             console.log("inside trigger workflow");
-            console.log("Current Access Token " + this._access_token);
+            if(this._accessToken == ""){
+                const promise = this.fetchToken();
+                promise.then((response) => {
+                    console.log("Current Access Token " + this._access_token);
+                    this.callAPI();
+                });
+            }else{
+                this.callAPI();
+            }
+            
+        } // triggerWorkflow end
+
+        callAPI() {
+            console.log("inside call API method");
             this.clearHeader()
             this.AppendToHeader("Authorization", "Bearer " + this._accessToken);
             this.AppendToHeader("Content-Type", "application/json");
@@ -192,14 +205,14 @@
                 redirect: 'follow'
             };
 
-            const promise = fetch(this._apiURL, requestOptions);
+            const promise_new = fetch(this._apiURL, requestOptions);
 
-            promise.then((response) =>  {
+            promise_new.then((response) =>  {
                 response.json().then((json) => {
                     console.log("recieved response " + json);
                 })
             });
-        } // triggerWorkflow end
+        }
 
         // redraw
         redraw() {
