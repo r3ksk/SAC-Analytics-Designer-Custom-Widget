@@ -47,7 +47,9 @@
             //     }
             // }else if(oChangedProperties == "spaConfigurations"){
                 this._tURL = this._uaaURL + "oauth/token?grant_type=client_credentials";
+                console.log("tURL - " + this._tURL);
                 this._apiURL = this._endpointAPI + "workflow/rest/v1/workflow-instances"
+                console.log("api url - " + this._apiURL);
                 this.fetchToken();
             // }
         }
@@ -143,8 +145,11 @@
 
         // End - Getters and Setters
 
-        fetchToken() {           
+        fetchToken() {     
+            console.log("Client ID " + this._clientID);
+            console.log("Client Secret " + this._clientSecret);      
             let basicAuthCred = "Basic " +  btoa(this._clientID + ":" + this._clientSecret);
+            console.log("Authorization " + basicAuthCred)
             this.AppendToHeader("Authorization", basicAuthCred);
 
             var requestOptions = {
