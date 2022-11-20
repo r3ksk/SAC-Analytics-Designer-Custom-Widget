@@ -195,9 +195,17 @@
             this.AppendToHeader("Authorization", "Bearer " + this._accessToken);
             this.AppendToHeader("Content-Type", "application/json");
 
+            var data = JSON.stringify({
+                "definitionId": "eu10.extension-suite-workshop.ordersmanagementdevtutorial.salesOrder",
+                "context": {
+                  "salesOrderId": "0500000001"
+                }
+              });
+
             var requestOptions = {
                 method: 'POST',
                 headers: this._myHeaders,
+                body: data,
                 redirect: 'follow'
             };
 
