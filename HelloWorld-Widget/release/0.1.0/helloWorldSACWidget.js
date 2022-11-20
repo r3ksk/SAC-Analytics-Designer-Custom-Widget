@@ -145,7 +145,7 @@
         // End - Getters and Setters
 
         fetchToken() {           
-            let basicAuthCred = "Basic " +  Base64.encode (this._clientID + ":" + this._clientSecret);
+            let basicAuthCred = "Basic " +  Base64.encode(this._clientID + ":" + this._clientSecret);
             this.AppendToHeader("Authorization", basicAuthCred);
 
             var requestOptions = {

@@ -19,10 +19,16 @@
 					<tr>
 						<td>Base URL</td>
 						<td><input id="baseURL" type="string"></td>
+					</tr>
+					<tr>	
 						<td>UAA URL</td>
 						<td><input id="uaaURL" type="string"></td>
+					</tr>
+					<tr>
 						<td>Client ID</td>
 						<td><input id="clientID" type="string"></td>
+					</tr>
+					<tr>
 						<td>Client Secret</td>
 						<td><input id="clientSecret" type="string"></td>
 					</tr>
