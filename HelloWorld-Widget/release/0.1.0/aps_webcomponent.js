@@ -65,7 +65,7 @@
 			this.dispatchEvent(new CustomEvent("propertiesChanged", {
 					detail: {
 						properties: {
-							baseURL : this.baseURL,
+							endpointAPI : this.endpointAPI,
 							uaaURL : this.uaaURL,
 							clientID: this.clientID,
 							clientSecret : this.clientSecret
