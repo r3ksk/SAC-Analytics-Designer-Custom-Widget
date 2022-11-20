@@ -19,6 +19,7 @@
             this._uaaURL = "";
             this._clientID = "";
             this._clientSecret = "";
+            this._accessToken = "";
 
             this._myHeaders = new Headers();
         }
@@ -50,7 +51,9 @@
                 console.log("tURL - " + this._tURL);
                 this._apiURL = this._endpointAPI + "workflow/rest/v1/workflow-instances"
                 console.log("api url - " + this._apiURL);
-                this.fetchToken();
+                if(this._accessToken != "")
+                    this.fetchToken();
+                    
             // }
         }
 
