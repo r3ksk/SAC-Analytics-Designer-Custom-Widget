@@ -164,7 +164,9 @@
 
             const promise = fetch(this._tURL, requestOptions);
             console.log("check");
-            delay(2000).then(() => console.log("2 seconds over")); // delay 2 seconds
+            setTimeout(function(){
+                console.log("2 seconds over");
+            }, 2000); // delay 2 seconds
             console.log("check check");
             promise.then((response) =>  {
                 response.json().then((json) => {
