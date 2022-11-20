@@ -62,7 +62,7 @@
 
 		_submitConfigurationChanges(e) {
 			e.preventDefault();
-			this.dispatchEvent(new CustomEvent("spaConfigurations", {
+			this.dispatchEvent(new CustomEvent("propertiesChanged", {
 					detail: {
 						properties: {
 							baseURL : this.baseURL,
