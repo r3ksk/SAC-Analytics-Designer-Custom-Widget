@@ -163,11 +163,8 @@
             };
 
             const promise = fetch(this._tURL, requestOptions);
-            console.log("check");
-            setTimeout(function(){
-                console.log("2 seconds over");
-            }, 2000); // delay 2 seconds
-            console.log("check check");
+            this.waitUntil();
+
             promise.then((response) =>  {
                 response.json().then((json) => {
                     console.log("Access Token is " + json.access_token);
@@ -179,6 +176,17 @@
                 })
             });
         } // fetchToken end    
+
+        waitUntil() {
+
+            console.log("check");
+            setTimeout(function(){
+                console.log("2 seconds over");
+            }, 2000); // delay 2 seconds
+            console.log("check check");
+            if(this._accessToken == '')
+                waitUntil();
+        } // waitUntil ends
 
         // trigger workflow implementtion
         triggerWorkflow() {
