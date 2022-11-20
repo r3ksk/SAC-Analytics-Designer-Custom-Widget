@@ -32,6 +32,9 @@
 						<td>Client Secret</td>
 						<td><input id="clientSecret" type="string"></td>
 					</tr>
+					<tr>
+						<input id="submitSPA" type = "submit" name = "Update" />
+					</tr>
 				</table>
 			</fieldset>
 		</form>
@@ -43,7 +46,7 @@
 			this._shadowRoot = this.attachShadow({mode: "open"});
 			this._shadowRoot.appendChild(template.content.cloneNode(true));
 			this._shadowRoot.getElementById("form").addEventListener("submit", this._submit.bind(this));
-			this._shadowRoot.getElementById("config").addEventListener("submit", this._submitConfigurationChanges.bind(this));
+			this._shadowRoot.getElementById("submitSPA").addEventListener("click", this._submitConfigurationChanges.bind(this));
 		}
 
 		_submit(e) {
