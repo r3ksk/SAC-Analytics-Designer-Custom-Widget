@@ -19,8 +19,6 @@
             this._uaaURL = "";
             this._clientID = "";
             this._clientSecret = "";
-            this._tURL = this._uaaURL + "oauth/token?grant_type=client_credentials";
-            this._apiURL = this._endpointAPI + "workflow/rest/v1/workflow-instances"
 
             this._myHeaders = new Headers();
         }
@@ -48,6 +46,8 @@
             //         this.redraw();
             //     }
             // }else if(oChangedProperties == "spaConfigurations"){
+                this._tURL = this._uaaURL + "oauth/token?grant_type=client_credentials";
+                this._apiURL = this._endpointAPI + "workflow/rest/v1/workflow-instances"
                 this.fetchToken();
             // }
         }
