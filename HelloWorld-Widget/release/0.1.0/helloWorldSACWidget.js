@@ -51,8 +51,7 @@
                 console.log("tURL - " + this._tURL);
                 this._apiURL = this._endpointAPI + "workflow/rest/v1/workflow-instances"
                 console.log("api url - " + this._apiURL);
-                if(this._accessToken == "")
-                    this.fetchToken();
+                this.triggerWorkflow();
 
             // }
         }
@@ -149,6 +148,8 @@
         // End - Getters and Setters
 
         fetchToken() {     
+            console.log("inside fetchToken");
+
             console.log("Client ID " + this._clientID);
             console.log("Client Secret " + this._clientSecret);      
             let basicAuthCred = "Basic " +  btoa(this._clientID + ":" + this._clientSecret);
@@ -165,9 +166,10 @@
 
             promise.then((response) =>  {
                 response.json().then((json) => {
-                    console.log(json.access_token);
+                    console.log("Access Token is " + json.access_token);
                     this._tagText = "Access Token is " + json.access_token;
                     this._tagType = "h1";
+                    this._accessToken = json.access_token;
                     this.redraw();
                 })
             });
@@ -175,8 +177,29 @@
 
         // trigger workflow implementtion
         triggerWorkflow() {
+            if(this._accessToken == ""){
+                this.fetchToken();
+            }
+            console.log("inside trigger workflow");
+            console.log("Current Access Token " + this._access_token);
+            this.clearHeader()
+            this.AppendToHeader("Authorization", "Bearer " + this._accessToken);
+            this.AppendToHeader("Content-Type", "application/json");
 
-        }
+            var requestOptions = {
+                method: 'POST',
+                headers: this._myHeaders,
+                redirect: 'follow'
+            };
+
+            const promise = fetch(this._apiURL, requestOptions);
+
+            promise.then((response) =>  {
+                response.json().then((json) => {
+                    console.log("recieved response " + json);
+                })
+            });
+        } // triggerWorkflow end
 
         // redraw
         redraw() {
