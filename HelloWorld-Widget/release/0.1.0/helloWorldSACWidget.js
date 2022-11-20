@@ -158,6 +158,7 @@
                 .then(
                     result => {
                         var obj = JSON.parse(result);
+                        console.log(obj.access_token);
                         this._tagText = "Access Token is " + obj.access_token;
                         this._tagType = "h1";
                         this.redraw();
