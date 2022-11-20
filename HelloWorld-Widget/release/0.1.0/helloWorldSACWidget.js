@@ -185,7 +185,7 @@
             }, 2000); // delay 2 seconds
             console.log("check check");
             if(this._accessToken == '')
-                waitUntil();
+                this.waitUntil();
         } // waitUntil ends
 
         // trigger workflow implementtion
