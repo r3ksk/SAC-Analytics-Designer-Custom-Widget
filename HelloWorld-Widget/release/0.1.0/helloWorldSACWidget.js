@@ -48,7 +48,6 @@
                     this.redraw();
                 }
             }else if(oChangedProperties == "spaConfigurations"){
-                this.
                 this.fetchToken();
             }
         }
