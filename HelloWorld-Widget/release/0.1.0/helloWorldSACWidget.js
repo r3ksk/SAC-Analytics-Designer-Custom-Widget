@@ -184,11 +184,9 @@
         triggerWorkflow() {
             console.log("inside trigger workflow");
             if(this._accessToken == ""){
-                const promise = this.fetchToken();
-                promise.then((response) => {
-                    console.log("Current Access Token " + this._access_token);
-                    this.callAPI();
-                });
+                this.fetchToken();
+                console.log("Current Access Token " + this._access_token);
+                this.callAPI();
             }else{
                 this.callAPI();
             }
