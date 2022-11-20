@@ -156,7 +156,7 @@
             const promise = fetch(this._tokenURL, requestOptions);
 
             promise.then((response) =>  {
-                response.json().then(json =>{
+                response.json().then((json) =>{
                     console.log(json.access_token);
                     this._tagText = "Access Token is " + json.access_token;
                     this._tagType = "h1";
