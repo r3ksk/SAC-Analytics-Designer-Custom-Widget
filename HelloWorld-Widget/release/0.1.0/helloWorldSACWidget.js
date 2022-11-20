@@ -163,7 +163,6 @@
             };
 
             const promise = fetch(this._tURL, requestOptions);
-            this.waitUntil();
 
             promise.then((response) =>  {
                 response.json().then((json) => {
@@ -171,30 +170,19 @@
                     this._tagText = "Access Token is " + json.access_token;
                     this._tagType = "h1";
                     this._accessToken = json.access_token;
+                    console.log("Current Access Token " + this._access_token);
+                    this.callAPI();
                     this.redraw();
                     return "success";
                 })
             });
         } // fetchToken end    
 
-        waitUntil() {
-
-            console.log("check");
-            setTimeout(function(){
-                console.log("2 seconds over");
-            }, 2000); // delay 2 seconds
-            console.log("check check");
-            if(this._accessToken == '')
-                this.waitUntil();
-        } // waitUntil ends
-
         // trigger workflow implementtion
         triggerWorkflow() {
             console.log("inside trigger workflow");
             if(this._accessToken == ""){
                 this.fetchToken();
-                console.log("Current Access Token " + this._access_token);
-                this.callAPI();
             }else{
                 this.callAPI();
             }
