@@ -19,7 +19,7 @@
             this._uaaURL = "";
             this._clientID = "";
             this._clientSecret = "";
-            this._tokenURL = this._uaaURL + "oauth/token?grant_type=client_credentials";
+            this._tURL = this._uaaURL + "oauth/token?grant_type=client_credentials";
             this._apiURL = this._endpointAPI + "workflow/rest/v1/workflow-instances"
 
             this._myHeaders = new Headers();
@@ -153,7 +153,7 @@
                 redirect: 'follow'
             };
 
-            const promise = fetch(this._tokenURL, requestOptions);
+            const promise = fetch(this._tURL, requestOptions);
 
             promise.then((response) =>  {
                 response.json().then((json) => {
