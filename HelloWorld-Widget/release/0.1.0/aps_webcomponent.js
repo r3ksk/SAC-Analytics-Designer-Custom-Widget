@@ -17,8 +17,8 @@
 				<legend>SAP Process Automation Configurations</legend>
 				<table>
 					<tr>
-						<td>Base URL</td>
-						<td><input id="baseURL" type="string"></td>
+						<td>End Point API</td>
+						<td><input id="endpointAPI" type="string"></td>
 					</tr>
 					<tr>	
 						<td>UAA URL</td>
@@ -82,12 +82,12 @@
 			return this._shadowRoot.getElementById("aps_text").value;
 		}
 
-		set baseURL(url) {
-			this._shadowRoot.getElementById("baseURL").value = url;
+		set endpointAPI(url) {
+			this._shadowRoot.getElementById("endpointAPI").value = url;
 		}
 
-		get baseURL() {
-			return this._shadowRoot.getElementById("baseURL").value;
+		get endpointAPI() {
+			return this._shadowRoot.getElementById("endpointAPI").value;
 		}
 
 		set uaaURL(url) {

@@ -15,12 +15,12 @@
             this._tagType = "h1";
             this._tagText = "Hello World";
             this._selectedRowData = "";
-            this._baseURL = "";
+            this._endpointAPI = "";
             this._uaaURL = "";
             this._clientID = "";
             this._clientSecret = "";
             this._tokenURL = this._uaaURL + "oauth/token?grant_type=client_credentials";
-            this._apiURL = this._baseURL + "workflow/rest/v1/workflow-instances"
+            this._apiURL = this._endpointAPI + "workflow/rest/v1/workflow-instances"
 
             this._myHeaders = new Headers();
         }
@@ -85,12 +85,12 @@
             this.myHeaders = new Headers();
         }
 
-		set baseURL(url) {
-			this._baseURL = url;
+		set endpointAPI(url) {
+			this._endpointAPI = url;
 		}
 
-		get baseURL() {
-			return this._baseURL;
+		get endpointAPI() {
+			return this._endpointAPI;
 		}
 
 		set uaaURL(url) {

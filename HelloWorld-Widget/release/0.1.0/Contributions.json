@@ -41,19 +41,19 @@
 		},"clientID": {
 			"type": "string",
 			"description": "Client ID for trigger SAP Process Automation Workflow",
-			"default" : "myClientID"
+			"default" : "myClient ID"
 		},"clientSecret": {
 			"type": "string",
 			"description": "Client Secret for trigger SAP Process Automation Workflow",
-			"default" : "myClientSecret"
+			"default" : "myClient Secret"
 		},"uaaURL": {
 			"type": "string",
 			"description": "UAA URL as per the SAP Process Automation Service Key",
-			"default" : "myUAAURL"
-		},"baseURL": {
+			"default" : "myUAA URL"
+		},"endpointAPI": {
 			"type": "string",
-			"description": "URL as per SAP Process Automation Service Key",
-			"default" : "myBaseURL"
+			"description": "End Point API as per SAP Process Automation Service Key",
+			"default" : "myEndPoint API"
 		}
 	},
 	"methods": {
