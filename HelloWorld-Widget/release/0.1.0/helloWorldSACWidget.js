@@ -77,7 +77,7 @@
         }
 
         AppendToHeader(type, value) {
-            this_myHeaders.append(type, value);
+            this._myHeaders.append(type, value);
         }
 
         clearHeader() {
