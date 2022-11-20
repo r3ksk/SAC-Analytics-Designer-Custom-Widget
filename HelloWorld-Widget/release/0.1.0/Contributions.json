@@ -38,6 +38,22 @@
 			"type": "string",
 			"description": "Selected Row Data",
 			"default" : ""
+		},"clientID": {
+			"type": "string",
+			"description": "Client ID for trigger SAP Process Automation Workflow",
+			"default" : "myClientID"
+		},"clientSecret": {
+			"type": "string",
+			"description": "Client Secret for trigger SAP Process Automation Workflow",
+			"default" : "myClientSecret"
+		},"uaaURL": {
+			"type": "string",
+			"description": "UAA URL as per the SAP Process Automation Service Key",
+			"default" : "myUAAURL"
+		},"baseURL": {
+			"type": "string",
+			"description": "URL as per SAP Process Automation Service Key",
+			"default" : "myBaseURL"
 		}
 	},
 	"methods": {
