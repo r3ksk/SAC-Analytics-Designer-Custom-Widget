@@ -51,9 +51,9 @@
                 console.log("tURL - " + this._tURL);
                 this._apiURL = this._endpointAPI + "workflow/rest/v1/workflow-instances"
                 console.log("api url - " + this._apiURL);
-                if(this._accessToken != "")
+                if(this._accessToken == "")
                     this.fetchToken();
-                    
+
             // }
         }
 
