@@ -153,19 +153,17 @@
                 redirect: 'follow'
             };
 
-            fetch(this._tokenURL, requestOptions)
-                .then(response => response.text())
-                .then(
-                    result => {
-                        var obj = JSON.parse(result);
-                        console.log(obj.access_token);
-                        this._tagText = "Access Token is " + obj.access_token;
-                        this._tagType = "h1";
-                        this.redraw();
-                    }
-                )
-                .catch(error => console.log('error', error));
-        }
+            const promise = fetch(this._tokenURL, requestOptions);
+
+            promise.then((response) =>  {
+                response.json().then(json =>{
+                    console.log(json.access_token);
+                    this._tagText = "Access Token is " + json.access_token;
+                    this._tagType = "h1";
+                    this.redraw();
+                })
+            });
+        } // fetchToken end    
 
         // trigger workflow implementtion
         triggerWorkflow() {
