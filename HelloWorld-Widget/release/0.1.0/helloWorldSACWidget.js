@@ -191,7 +191,7 @@
 
         callAPI() {
             console.log("inside call API method");
-            this.clearHeader()
+            this.clearHeader();
             this.AppendToHeader("Authorization", "Bearer " + this._accessToken);
             this.AppendToHeader("Content-Type", "application/json");
 
