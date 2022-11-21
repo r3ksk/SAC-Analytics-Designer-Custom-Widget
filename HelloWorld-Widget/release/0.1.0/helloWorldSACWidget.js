@@ -213,9 +213,8 @@
             const promise_new = fetch(this._apiURL, requestOptions);
 
             promise_new.then((response) =>  {
-                response.json().then((json) => {
-                    console.log("recieved response " + json);
-                })
+                console.log("Recieved Response HTTP Code : " + response.status);
+                console.log("Response Object ", response);
             });
         }
 
