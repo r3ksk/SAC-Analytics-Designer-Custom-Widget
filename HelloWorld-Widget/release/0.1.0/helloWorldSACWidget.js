@@ -49,7 +49,7 @@
             // }else if(oChangedProperties == "spaConfigurations"){
                 this._tURL = this._uaaURL + "oauth/token?grant_type=client_credentials";
                 console.log("tURL - " + this._tURL);
-                this._apiURL = this._endpointAPI + "workflow/rest/v1/workflow-instances"
+                this._apiURL = this._endpointAPI + "public/workflow/rest/v1/workflow-instances"
                 console.log("api url - " + this._apiURL);
                 this.triggerWorkflow();
 
@@ -201,7 +201,7 @@
                 "context": {
                   "salesOrderId": "0500000001"
                 }
-              });
+            });
 
             var requestOptions = {
                 method: 'POST',
