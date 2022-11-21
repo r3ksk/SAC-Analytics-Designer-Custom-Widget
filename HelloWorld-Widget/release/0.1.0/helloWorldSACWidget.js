@@ -195,6 +195,9 @@
             var myHeaders = new Headers();
             myHeaders.append("Authorization", "Bearer " + this._accessToken);
             myHeaders.append("Content-Type", "application/json");
+            myHeaders.append("Accept", "application/json");
+            myHeaders.append("Accept-Language", "Accept-Language");
+            myHeaders.append("DataServiceVersion", "2.0");
 
             var data = JSON.stringify({
                 "definitionId": "eu10.extension-suite-workshop.ordersmanagementdevtutorial.salesOrder",
