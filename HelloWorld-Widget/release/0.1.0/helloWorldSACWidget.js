@@ -170,7 +170,7 @@
                     this._tagText = "Access Token is " + json.access_token;
                     this._tagType = "h1";
                     this._accessToken = json.access_token;
-                    console.log("Current Access Token " + this._access_token);
+                    console.log("Current Access Token " + this._accessToken);
                     this.callAPI();
                     this.redraw();
                     return "success";
