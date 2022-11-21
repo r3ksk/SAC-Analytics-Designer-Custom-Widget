@@ -85,8 +85,8 @@
         }
 
         clearHeader() {
-            this.myHeaders = null;
-            this.myHeaders = new Headers();
+            this._myHeaders = null;
+            this._myHeaders = new Headers();
         }
 
 		set endpointAPI(url) {
