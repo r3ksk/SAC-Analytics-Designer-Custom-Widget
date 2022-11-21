@@ -205,7 +205,7 @@
             var requestOptions = {
                 method: 'POST',
                 headers: this._myHeaders,
-                mode: 'no-cors'
+                mode: 'no-cors',
                 body: data,
                 redirect: 'follow'
             };
