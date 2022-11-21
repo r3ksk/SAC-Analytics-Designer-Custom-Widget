@@ -191,9 +191,10 @@
 
         callAPI() {
             console.log("inside call API method");
-            this.clearHeader();
-            this.AppendToHeader("Authorization", "Bearer " + this._accessToken);
-            this.AppendToHeader("Content-Type", "application/json");
+            // this.clearHeader();
+            var myHeaders = new Headers();
+            myHeaders.append("Authorization", "Bearer " + this._accessToken);
+            myHeaders.append("Content-Type", "application/json");
 
             var data = JSON.stringify({
                 "definitionId": "eu10.extension-suite-workshop.ordersmanagementdevtutorial.salesOrder",
@@ -204,7 +205,7 @@
 
             var requestOptions = {
                 method: 'POST',
-                headers: this._myHeaders,
+                headers: myHeaders,
                 mode: 'no-cors',
                 body: data,
                 redirect: 'follow'
