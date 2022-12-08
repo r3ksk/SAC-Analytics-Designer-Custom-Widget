@@ -187,7 +187,7 @@
                 this.callAPI();
             }
             
-        } // triggerWorkflow end
+        } // triggerWorkf   low end
 
         callAPI() {
             console.log("inside call API method");
@@ -207,10 +207,10 @@
             });
 
             var requestOptions = {
-                method: 'POST',
+                method: 'GET',
                 headers: myHeaders,
  //               mode: 'no-cors',
-                body: data,
+ //               body: data,
                 redirect: 'follow'
             };
 
