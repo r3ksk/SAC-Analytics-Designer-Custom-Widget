@@ -207,10 +207,10 @@
             });
 
             var requestOptions = {
-                method: 'GET',
+                method: 'POST',
                 headers: myHeaders,
  //               mode: 'no-cors',
- //               body: data,
+                body: data,
                 redirect: 'follow'
             };
 
