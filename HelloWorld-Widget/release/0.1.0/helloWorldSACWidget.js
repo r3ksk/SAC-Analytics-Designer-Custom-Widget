@@ -214,7 +214,7 @@
                 redirect: 'follow'
             };
 
-            const promise_new = fetch(this._apiURL, requestOptions);
+            const promise_new = fetch(this._endpointAPI, requestOptions);
 
             promise_new.then((response) =>  {
                 console.log("Recieved Response HTTP Code : " + response.status);
